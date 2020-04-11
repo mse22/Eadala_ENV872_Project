@@ -1,5 +1,3 @@
-# Eadala_Project
-Environmental Data Analytics final project, Spring 2020
 # <Repository Title>
 <Instructions: copy and paste this template into your project README file (found in the parent folder of the repository). Fill in relevant information as requested.>
 
