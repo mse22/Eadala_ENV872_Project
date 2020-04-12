@@ -1,4 +1,5 @@
 # Environmental Data Analytics Project by Monisha Eadala
+Course repository for Environmental Data Analytics (ENV 872L) at Duke University, spring 2020
 <Instructions: copy and paste this template into your project README file (found in the parent folder of the repository). Fill in relevant information as requested.>
 
 <General notes: add as much information as is relevant for your repository. Some overarching guidelines are provided, but feel free to expand on these guidelines.>
