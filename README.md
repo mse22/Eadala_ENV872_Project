@@ -9,6 +9,10 @@
 
 <describe the purpose of this repository, the information it contains, and any relevant analysis goals. What, why, where, when, how?>
 
+The repository contains different aspects of the project and the progress of the project right from inception to completion. My goal is to study water quality with the help of the NTL-LTER Lake Datasets provided to us through the Environmental Data Analytics class taught at Nicholas School of the Environment in Spring 2020. The dataset contains data from studies on several lakes in the North Temperate Lakes District in Wisconsin, USA. Data were collected as part of the Long Term Ecological Research station established by the National Science Foundation. 
+
+I hope to understand some basic correlations that can be understood through this dataset, and answer research questions through the data wrangling, processing, exploring, and visualization techniques taught in the class. 
+
 ## Investigators
 
 <name(s), affiliation(s), contact information, roles (if applicable)>
