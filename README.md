@@ -119,6 +119,11 @@ comments           | factor   | -       | Provides any additional comments
 
 <list any software scripts/code contained in the repository and a description of their purpose.>
 
+Code will be included in three seperate R markdown files:
+1. 'Processing&Wrangling'
+2.
+3. 
+
 ## Quality assurance/quality control
 
 This readme file provides for a quality assurance/control plan. All stages of the project will be stores in the form of R markdown  files and named according to the conventions highlighted under "Folder structure, file formats, and naming conventions" above. Any potential errors or problems I may run into with the data will be recorded under a separate document (PDF or R markdown) that will reside in the "Other" folder of this respository. Also, changes made to any files will be pushed to the git repository on daily basis for quality check purposes.
