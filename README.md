@@ -52,21 +52,21 @@ There are three raw data filed in the repository:
 
 Column Name        | Class    | Units   |Relevant Dataset Information
 -------------------|----------|---------|----------------------------
-lakeid             | factor   |         | Provides the IDs of the lakes either in the form of capital letters or words; for example, L, R, T, E, Tbog, Roach, Ward, etc. 
-lakename           | factor   |         | Provides the names of the lakes; for example, Paul Lake, Peter Lake, Tuesday Lake, East Long Lake, etc.
-year4              | integer  |         | Provides the year in which its respective data was collected in four digits
-daynum             | integer  |         | Provies the number of the day in which its data was collected from from 1 to 366
-sampledate         | factor   |         |          
-depth              | factor   |         |
-depth_id           | integer  |         | 
-tpc                | numeric  |         |
-tpn                | numeric  |         | 
-DIC_mg             | numeric  |         |
-DIC_uM             | numeric  |         |
-air_pco2           | numeric  |         |
-water_pco2         | numeric  |         |
-doc                | numeric  |         |
-absorbance         | numeric  |         |
+lakeid             | factor   | -       | Provides the IDs of the lakes either in the form of capital letters or words; for example, L, R, T, E, Tbog, Roach, Ward, etc. 
+lakename           | factor   | -       | Provides the names of the lakes; for example, Paul Lake, Peter Lake, Tuesday Lake, East Long Lake, etc.
+year4              | integer  | -       | Provides the year in which its respective data was collected in four digits
+daynum             | integer  | -       | Provides the number of the day in which its data was collected from from 1 to 366
+sampledate         | factor   | -       | Provides the date on which its data was collected in m/d/y format
+depth              | factor   | m       | Provides the depth at which the measurement of taken in meters
+depth_id           | integer  | -       | Provides the depth level categorizied from -1 to 7
+tpc                | numeric  | mg/L    | Provides the total particulate carbon
+tpn                | numeric  | mg/L    | Provides the total particulate nitrogen
+DIC_mg             | numeric  | mg/L    |
+DIC_uM             | numeric  | uM/L    | measured in micro-mole per liter
+air_pco2           | numeric  | uatm    | Provides the partial pressure of CO2 (pCO2) is the amount of free CO2 in air
+water_pco2         | numeric  | uatm    | Provides the partial pressure of aqueous CO2 (pCO2) is the amount of free CO2 in water
+doc                | numeric  | mg/L    | Provided the dissolved organic carbon concentration
+absorbance         | numeric  | Au      | Provides the measure of the capacity of the water to absorb light of a certain wavelength in absorbance units
 
 2. 'NTL-LTER_Lake_ChemistryPhysics_Raw.csv' file: 
 
