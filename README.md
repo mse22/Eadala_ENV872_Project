@@ -51,7 +51,7 @@ Data were collected from the North Temperate Lakes Long Term Ecological Research
 <For each data file in the repository, describe the data contained in each column. Include the column name, a description of the information, the class of data, and any units associated with the data. Create a list or table for each data file.> 
 
 There are three raw data filed in the repository:
-1. 'NTL-LTER_Lake_Carbon_Raw.csv' file: This contains data relevant to dissolved organic and inorganic carbon, particulate organic matter, partial pressure of CO2 and absorbance at 440nm. It contains the below column names and their respective data:
+1. 'NTL-LTER_Lake_Carbon_Raw.csv' file: This contains data relevant to dissolved organic and inorganic carbon, particulate organic matter, partial pressure of CO2 and absorbance at 440nm. Samples were collected with a Van Dorn sampler. Organic carbon and absorbance samples were collected from the epilimnion, metalimnion, and hypolimnion (upper, intermediate, and lower layers of the stratified lakes respectively). Inorganic samples were collected at depths corresponding to 100%, 50%, 25%, 10%, 5%, and 1% of surface irradiance, as well as one sample from the hypolimnion. Samples for the partial pressure of CO2 were collected from two meters above the lake surface (air) and just below the lake surface (water). Sampling frequenc varies, and the number of site are 14. The file contains the below column names and their relevant details:
 
 Column Name        | Class    | Units   |Relevant Dataset Information
 -------------------|----------|---------|----------------------------
@@ -71,7 +71,7 @@ water_pco2         | numeric  | uatm    | Provides the partial pressure of aqueo
 doc                | numeric  | mg/L    | Provided the dissolved organic carbon concentration
 absorbance         | numeric  | Au      | Provides the measure of the capacity of the water to absorb light of a certain wavelength in absorbance units
 
-2. 'NTL-LTER_Lake_ChemistryPhysics_Raw.csv' file: This contains data relevant to physical and chemical variables (such as temperature, dissolved oxygen, and irradiance) that are measured at one central station near the deepest point of each lake. In most cases these measurements are made in the morning (8 to 9 am). It contains the below column names and their respective data:
+2. 'NTL-LTER_Lake_ChemistryPhysics_Raw.csv' file: This contains data relevant to physical and chemical variables (such as temperature, dissolved oxygen, and irradiance) that are measured at one central station near the deepest point of each lake. In most cases these measurements are made in the morning (8 to 9 am). It contains the below column names and their relevant details:
 
 
 Column Name       | Class     | Units   | Relevant Dataset Information
@@ -88,7 +88,7 @@ irradiancewWater  | numeric   | uE      | Provides the photosynthetically active
 irradianceDeck    | numeric   | uE      | Provies the photosynthetically active radiation measured on the deck of the sampling boat in micro-Einstein
 comments          | factor    | -       | Provides the comments noting departure from standard procedure 
 
-3. 'NTL-LTER_Lake_Nutrients_Raw.csv' file: This contains the data relevant to physical and chemical variables (such as total nitrogen, total phosphorius, ammonia and ammonium, nitrite and nitrate, and phosphate concentrations) that are measured at one central station near the deepest point of each lake. In most cases these measurements are made in the morning (8 to 9 am). It contains the below column names and their respective data:
+3. 'NTL-LTER_Lake_Nutrients_Raw.csv' file: This contains the data relevant to physical and chemical variables (such as total nitrogen, total phosphorius, ammonia and ammonium, nitrite and nitrate, and phosphate concentrations) that are measured at one central station near the deepest point of each lake. In most cases these measurements are made in the morning (8 to 9 am). It contains the below column names and their relevant details:
 
 Column Name        | Class    | Units   | Relevant Dataset Information
 -------------------|----------|---------|-----------------------------
