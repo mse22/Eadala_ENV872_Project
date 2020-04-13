@@ -4,7 +4,7 @@ Final project repository for Environmental Data Analytics (ENV 872L) at Duke Uni
 
 ## Summary
 
-This repository contains the the relevant datasets (all versions - raw and processed), different aspects and the progress of my final project right from its inception to completion (code segragated as per different stages - processing, wrangling, data exploration, data analysis, final/compliled). This repository will aid in quality documentation, efficient data analysis, and future replication or improvisation plans. 
+This repository contains the the relevant datasets (all versions - raw and processed), different aspects and the progress of my final project right from its inception to completion (code segragated as per different stages - processing, wrangling, data exploration, data analysis, final output). This repository will aid in quality documentation, efficient data analysis, and future replication or improvisation plans. 
 
 My goal is to study water quality with the help of the NTL-LTER Lake Datasets provided to me through the Environmental Data Analytics class taught at Nicholas School of the Environment in Spring 2020. The datasets contains the concentrations of key minerals/nutrients and physical attributes measured in various lakes of Wisconsin. 
 
@@ -40,7 +40,7 @@ Each of relevant files were downloaded through "Download All Data (csv)" button.
 The folders contained in the reposity are: 
 1. "Data" folder further subdivided into "Raw" and "Processed" folders that each contain their relevant csv files
 2. "Code" folder that contains the three R markdown files - "Processing&Wrangling", "Data_exploration" and "Data_analysis" 
-3. "Final_project" folder that contains the relevant file in r markdown and PDF formats
+3. "Output" folder that contains the final project file in r markdown and PDF formats
 4. "Other" folder will contain files that do not fit any of the above-mentioned categories
 
 The files are either named as per their description of the data, or their function. For example, raw datasets in the initial stage are named "Raw", while any dataset that has departed from the raw dataset is named "Processed". The R markdown files stored in the 'Code' folder are named according to the stages of the analysis; for example, the code relevant to the processing and wrangling stages of the project are in the file named "Processions&Wranging" and the code relevant to the data exploration stage of the project is named "Data_exploration". The CSV files will be named according to their default name found in its source website, combined with important elements or column names that they contain and the type/stage of the data (whether raw or processed). 
