@@ -124,8 +124,8 @@ Nutrients_summary.ratio <- Nutrients_data_processed %>%
             maximum.NPRatio = max(NPRatio, na.rm = TRUE),
             Standard.dev.NPRatio = sd(NPRatio, na.rm = TRUE))
 
-categories <- list(unique(DIC_data$lakeid))
-class(DIC_data$depth)
+list(unique(Nutrients_data$depth_id))
+class(Nutrients_data$comments)
 ```
 
 ## R Markdown
