@@ -57,9 +57,9 @@ Column Name        | Class    | Units   |Relevant Dataset Information
 lakeid             | factor   | -       | Provides the IDs of the lakes either in the form of capital letters or words; for example, L, R, T, E, Tbog, Roach, Ward, etc. 
 lakename           | factor   | -       | Provides the names of the lakes; for example, Paul Lake, Peter Lake, Tuesday Lake, East Long Lake, etc.
 year4              | integer  | -       | Provides the year in which its respective data was collected in four digits
-daynum             | integer  | -       | Provides the number of the day in which its data was collected from from 1 to 366
+daynum             | integer  | -       | Provides the number of the day on which its data was collected from from 1 to 366
 sampledate         | factor   | -       | Provides the date on which its data was collected in m/d/y format
-depth              | factor   | m       | Provides the depth at which the measurement of taken in meters
+depth              | factor   | m       | Provides the depth at which the data was measured in meters
 depth_id           | integer  | -       | Provides the depth level categorizied from -1 to 7
 tpc                | numeric  | mg/L    | Provides the total particulate carbon
 tpn                | numeric  | mg/L    | Provides the total particulate nitrogen
@@ -75,14 +75,17 @@ absorbance         | numeric  | Au      | Provides the measure of the capacity o
 
 Column Name       | Class     | Units   | Relevant Dataset Information
 ------------------|-----------|---------|-----------------------------
-year4             |           |         |
-daynum            |           |         | 
-sampledate        |           |         | 
-depth             |           |         | 
-dissolvedOxygen   |           |         | 
-irradianceWater   |           |         | 
-irradianceDeck    |           |         | 
-comments          |           |         | 
+lakeid            | factor    | -       | Provides the IDs of the lakes either in the form of capital letters or words; for example, L, R, T, E, Tbog, Roach, Ward, etc. 
+lakename          | factor    | -       | Provides the names of the lakes; for example, Paul Lake, Peter Lake, Tuesday Lake, East Long Lake, etc.
+year4             | integer   | -       | Provides the year in which its respective data was collected in four digits
+daynum            | integer   | -       | Provides the number of the day on which its data was collected from from 1 to 366
+sampledate        | factor    | -       | Provides the date on which its data was collected in m/d/y format
+depth             | numeric   | m       | Provides the depth at which the data was measured in meters
+temperature_C     | numeric   | C       | Provides the water temperature in celcius
+dissolvedOxygen   | numeric   | mg/L    | Provides the dissolved oxygen measurement in milligrams per liter
+irradiancewWater  | numeric   | uE      | Provides the photosynthetically active radiation measured in the water column in micro-Einstein 
+irradianceDeck    | numeric   | uE      | Provies the photosynthetically active radiation measured on the deck of the sampling boat in micro-Einstein
+comments          | factor    | -       | Provides the comments noting departure from standard procedure 
 
 3. 'NTL-LTER_Lake_Nutrients_Raw.csv' file:
 
