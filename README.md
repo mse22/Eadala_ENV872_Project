@@ -50,23 +50,23 @@ Data were collected from the North Temperate Lakes Long Term Ecological Research
 There are three raw data filed in the repository:
 1. 'NTL-LTER_Lake_Carbon_Raw.csv' file: This contains data relevant to dissolved organic and inorganic carbon, particulate organic matter, partial pressure of CO2 and absorbance at 440nm. It contains the below column names and their respective data:
 
-Column Name       | Relevant Dataset Information
-------------------|--------------------------------------
-lakeid            | Provides the IDs of the lakes either in the form of capital letters or words; for example, L, R, T, E, Tbog, Roach, Ward, etc. 
-lakename          | Provides the names of the lakes; for example, Paul Lake, Peter Lake, Tuesday Lake, East Long Lake, etc.
-year4             | Provides the year in which its respective data collection happened in four digits
-daynum            | 
-sampledate        | 
-depth             | 
-depth_id          | 
-tpc               | 
-tpn               | 
-DIC_mg            | 
-DIC_uM            | 
-air_pco2          | 
-water_pco2        | 
-doc               | 
-absorbance        | 
+Column Name       | Class   | Relevant Dataset Information
+------------------|---------|-----------------------------
+lakeid            |         |Provides the IDs of the lakes either in the form of capital letters or words; for example, L, R, T, E, Tbog, Roach, Ward, etc. 
+lakename          |         |Provides the names of the lakes; for example, Paul Lake, Peter Lake, Tuesday Lake, East Long Lake, etc.
+year4             |         |Provides the year in which its respective data collection happened in four digits
+daynum            |         | 
+sampledate        |         |
+depth             |         |
+depth_id          |         | 
+tpc               |         |
+tpn               |         | 
+DIC_mg            |         |
+DIC_uM            |         |
+air_pco2          |         |
+water_pco2        |         |
+doc               |         |
+absorbance        |         |
 
 2. 'NTL-LTER_Lake_ChemistryPhysics_Raw.csv' file: 
 
