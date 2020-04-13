@@ -61,8 +61,8 @@ depth              | factor   | m       | Provides the depth at which the measur
 depth_id           | integer  | -       | Provides the depth level categorizied from -1 to 7
 tpc                | numeric  | mg/L    | Provides the total particulate carbon
 tpn                | numeric  | mg/L    | Provides the total particulate nitrogen
-DIC_mg             | numeric  | mg/L    |
-DIC_uM             | numeric  | uM/L    | measured in micro-mole per liter
+DIC_mg             | numeric  | mg/L    | Provides the dissolved inorganic carbon measured in miligram per liter
+DIC_uM             | numeric  | uM/L    | Provides the dissolved inorganic carbon measured in micro-mole per liter
 air_pco2           | numeric  | uatm    | Provides the partial pressure of CO2 (pCO2) is the amount of free CO2 in air
 water_pco2         | numeric  | uatm    | Provides the partial pressure of aqueous CO2 (pCO2) is the amount of free CO2 in water
 doc                | numeric  | mg/L    | Provided the dissolved organic carbon concentration
