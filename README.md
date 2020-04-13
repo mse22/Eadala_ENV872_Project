@@ -12,7 +12,7 @@ Final project repository for Environmental Data Analytics (ENV 872L) at Duke Uni
 
 <describe the purpose of this repository, the information it contains, and any relevant analysis goals. What, why, where, when, how?>
 
-The repository contains different aspects and the progress of the final project right from its inception to completion. My goal is to study water quality with the help of the NTL-LTER Lake Datasets provided to us through the Environmental Data Analytics class taught at Nicholas School of the Environment in Spring 2020.
+The repository contains different aspects and the progress of my final project right from its inception to completion. My goal is to study water quality with the help of the NTL-LTER Lake Datasets provided to me through the Environmental Data Analytics class taught at Nicholas School of the Environment in Spring 2020.
 
 Eutrophication is a phenamenon caused due to excess of nutrients in water and it causes structural changes to the ecosystem in the form of increased production of algae and aquatic plants, depletion of fish species, general deterioration of water quality and other effects that reduce and preclude use. Therefore, it is important to observe and manage lakes and their nutrient loading from time to time to conserve water and other ecosystems dependent on it.
 
