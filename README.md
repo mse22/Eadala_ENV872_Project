@@ -59,8 +59,8 @@ lakename           | factor   | -       | Provides the names of the lakes; for e
 year4              | integer  | -       | Provides the year in which its respective data was collected in four digits
 daynum             | integer  | -       | Provides the number of the day on which its data was collected from from 1 to 366
 sampledate         | factor   | -       | Provides the date on which its data was collected in m/d/y format
-depth              | factor   | m       | Provides the depth at which the data was measured in meters
-depth_id           | integer  | -       | Provides the depth level categorizied from -1 to 7
+depth              | factor   | m       | Provides the depth at which the data sample was collected in meters
+depth_id           | integer  | -       | Provides the depth level categorizied from -2 to 7; 1 represents 100% light, 2 represents 50% light, 3 represents 25% light; 4 represents 10% light, 5 represents 5% light, 6 represents 1% light, 7 means Hypolimnion, -1 means Epilimnion/PML, and -2 means Metalimnion
 tpc                | numeric  | mg/L    | Provides the total particulate carbon
 tpn                | numeric  | mg/L    | Provides the total particulate nitrogen
 DIC_mg             | numeric  | mg/L    | Provides the dissolved inorganic carbon measured in milligrams per liter
@@ -80,7 +80,7 @@ lakename          | factor    | -       | Provides the names of the lakes; for e
 year4             | integer   | -       | Provides the year in which its respective data was collected in four digits
 daynum            | integer   | -       | Provides the number of the day on which its data was collected from from 1 to 366
 sampledate        | factor    | -       | Provides the date on which its data was collected in m/d/y format
-depth             | numeric   | m       | Provides the depth at which the data was measured in meters
+depth             | numeric   | m       | Provides the depth at which the data sample was collected in meters
 temperature_C     | numeric   | C       | Provides the water temperature in celcius
 dissolvedOxygen   | numeric   | mg/L    | Provides the dissolved oxygen measurement in milligrams per liter
 irradiancewWater  | numeric   | uE      | Provides the photosynthetically active radiation measured in the water column in micro-Einstein 
@@ -91,21 +91,20 @@ comments          | factor    | -       | Provides the comments noting departure
 
 Column Name        | Class    | Units   | Relevant Dataset Information
 -------------------|----------|---------|-----------------------------
-lakeid             | factor   |         | Provides the IDs of the lakes either in the form of capital letters or words; for example, L, R, T, E, Tbog, Roach, Ward, etc. 
-lakename           | factor   |         | Provides the names of the lakes; for example, Paul Lake, Peter Lake, Tuesday Lake, East Long Lake, etc.
-year4              | integer  |         | Provides the year in which its respective data was collected in four digits
-daynum             | integer  |         | 
-sampledate         | factor   |         |
-depth              | factor   |         |
-depth_id           | integer  |         |
-tpc                | numeric  |         |
-tpn                | numeric  |         | 
-DIC_mg             | numeric  |         |
-DIC_uM             | numeric  |         |
-air_pco2           | numeric  |         |
-water_pco2         | numeric  |         |
-doc                | numeric  |         |
-absorbance         | numeric  |         |
+lakeid             | factor   | -       | Provides the IDs of the lakes either in the form of capital letters or words; for example, L, R, T, E, Tbog, Roach, Ward, etc. 
+lakename           | factor   | -       | Provides the names of the lakes; for example, Paul Lake, Peter Lake, Tuesday Lake, East Long Lake, etc.
+year4              | integer  | -       | Provides the year in which its respective data was collected in four digits
+daynum             | integer  | -       | Provides the number of the day on which its data was collected from from 1 to 366
+sampledate         | factor   | -       | Provides the date on which its data was collected in m/d/y format
+depth_id           | integer  | -       | Provides the depth level categorizied from -2 to 7; 1 represents 100% light, 2 represents 50% light, 3 represents 25% light; 4 represents 10% light, 5 represents 5% light, 6 represents 1% light, 7 means Hypolimnion, -1 means Epilimnion/PML, and -2 means Metalimnion
+depth              | numeric  | m       | Provides the depth at which the data sample was collected in meters
+tn_ug              | numeric  | ug/L    | Provides the total nitrogen concentration in micrograms per liter
+tp_ug              | numeric  | ug/L    | Provides the total phosphorus concentration in micrograms per liter
+nh34               | numeric  | ug/L    | Provides the ammonia and ammonium concentration in micrograms per liter
+no23               | numeric  | ug/L    | Provides the nitrite and nitrate concentration in micrograms per liter
+po4                | numeric  | ug/L    | Provides the phosphate concentration in micrograms per liter
+comments           | factor   | -       | Provides any additional comments
+
 
 
 
