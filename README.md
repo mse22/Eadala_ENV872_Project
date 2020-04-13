@@ -36,7 +36,7 @@ The dataset contains data from studies on several lakes in the North Temperate L
 
 Data were collected from the North Temperate Lakes Long Term Ecological Research website. More information can be found here: https://lter.limnology.wisc.edu/about/overview. Data were collected using the Data tool (https://lter.limnology.wisc.edu/data).
 
-From the Data homepage, the following selections were typed, searched, and downloaded through "Download All Data (csv)" button: *Cascade Project at North Temperate Lakes LTER Core Data Carbon 1984 - 2016*, *Cascade Project at North Temperate Lakes LTER Core Data Physical and Chemical Limnology 1984 - 2016*, and *Cascade Project at North Temperate Lakes LTER Core Data Nutrients 1991 - 2016* 
+From the Data homepage, the following were typed, searched, and downloaded through "Download All Data (csv)" button: *Cascade Project at North Temperate Lakes LTER Core Data Carbon 1984 - 2016*, *Cascade Project at North Temperate Lakes LTER Core Data Physical and Chemical Limnology 1984 - 2016*, and *Cascade Project at North Temperate Lakes LTER Core Data Nutrients 1991 - 2016* 
 
 ## Folder structure, file formats, and naming conventions 
 
@@ -117,10 +117,10 @@ comments           | factor   | -       | Provides any additional comments
 
 <list any software scripts/code contained in the repository and a description of their purpose.>
 
-Code will be included in three seperate R markdown files:
-1. 'Processing&Wrangling'
-2.
-3. 
+Code will be included in three seperate R markdown files in the folder 'Code':
+1. 'Processing&Wrangling.Rmd': Code relevant to any processing and wrangling required to be done on the Raw files will be included in this file
+2. 'Data_exploration.Rmd': Code relevant to any data exploration before the main data analysis stage will be stored in this file
+3. 'Data_analysis.Rmd': Code relevant to the main data analysis aspect of the project will be inluded here
 
 ## Quality assurance/quality control
 
