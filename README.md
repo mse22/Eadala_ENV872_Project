@@ -41,7 +41,7 @@ The dataset contains data from studies on several lakes in the North Temperate L
 
 <describe your file naming conventions>
 
-The folders contained in the reposity are: 1. "Data" folder further subdivided into "waw" and "processed" folders that each contain their relevant csv files, 2. "Code" folder that contains the three R markdown files - processing & wrangling, data exploration and data analysis 3. Final project files in r markdown and PDF formats. The files are either named as per their description of the data, or their function. For example, raw datasets in the initial stage are named "raw", while any dataset that has departed from the raw dataset is named "processed". The R markdown files are named according to the stages of the analysis. 
+The folders contained in the reposity are: 1. "Data" folder further subdivided into "Raw" and "Processed" folders that each contain their relevant csv files, 2. "Code" folder that contains the three R markdown files - Processing & wrangling, data exploration and data analysis 3. Final project files in r markdown and PDF formats. The files are either named as per their description of the data, or their function. For example, raw datasets in the initial stage are named "raw", while any dataset that has departed from the raw dataset is named "processed". The R markdown files are named according to the stages of the analysis. 
 
 ## Metadata
 
