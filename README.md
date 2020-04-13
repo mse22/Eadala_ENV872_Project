@@ -13,7 +13,7 @@ The repository contains different aspects and the progress of my final project r
 
 Eutrophication is a phenamenon caused due to excess of nutrients in water and it causes structural changes to the ecosystem in the form of increased production of algae and aquatic plants, depletion of fish species, general deterioration of water quality and other effects that reduce and preclude use. Therefore, it is important to observe and manage lakes and their nutrient loading from time to time to conserve water and other ecosystems dependent on it.
 
-Through this project and its relevant datasets, I hope to understand eutrophication and the correlations between certain elements and nutrients. I intent to answer my research questions through the data wrangling, processing, exploring, and visualization techniques taught in the class. 
+Therefore, through this project and its relevant datasets, I hope to understand eutrophication and the correlations between the elements and nutrients measured. I intent to answer my research questions through the data wrangling, processing, exploring, and visualization techniques taught in the class.
 
 ## Investigators
 
