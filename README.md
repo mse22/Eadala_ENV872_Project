@@ -43,20 +43,63 @@ The folders contained in the reposity are: 1. "Data" folder further subdivided i
 
 ## Metadata
 
-Data were collected from the North Temperate Lakes Long Term Ecological Research website. More information can be found here: https://lter.limnology.wisc.edu/about/overview
-
-Data were collected using the Data tool (https://lter.limnology.wisc.edu/data).
+Data were collected from the North Temperate Lakes Long Term Ecological Research website. More information can be found here: https://lter.limnology.wisc.edu/about/overview. Data were collected using the Data tool (https://lter.limnology.wisc.edu/data).
 
 <For each data file in the repository, describe the data contained in each column. Include the column name, a description of the information, the class of data, and any units associated with the data. Create a list or table for each data file.> 
 
 There are three raw data filed in the repository:
-1. 'NTL-LTER_Lake_Carbon_Raw.csv' file: This  contains data relevant to dissolved organic and inorganic carbon, particulate organic matter, partial pressure of CO2 and absorbance at 440nm. It contains the below column names and their respective data:
-  a. 
-  b.
-  c.
-  d.
+1. 'NTL-LTER_Lake_Carbon_Raw.csv' file: This contains data relevant to dissolved organic and inorganic carbon, particulate organic matter, partial pressure of CO2 and absorbance at 440nm. It contains the below column names and their respective data:
+
+Column Name       | Relevant Dataset Information
+------------------|--------------------------------------
+lakeid            | Provides the IDs of the lakes either in the form of capital letters or words; for example, L, R, T, E, Tbog, Roach, Ward, etc. 
+lakename          | Provides the names of the lakes; for example, Paul Lake, Peter Lake, Tuesday Lake, East Long Lake, etc.
+year4             | Provides the year in which its respective data collection happened in four digits
+daynum            | 
+sampledate        | 
+depth             | 
+depth_id          | 
+tpc               | 
+tpn               | 
+DIC_mg            | 
+DIC_uM            | 
+air_pco2          | 
+water_pco2        | 
+doc               | 
+absorbance        | 
+
 2. 'NTL-LTER_Lake_ChemistryPhysics_Raw.csv' file: 
+
+
+Column Name       | Relevant Dataset Information
+----------- ------|--------------------------------------
+lakeid            | Provides measurements in Ozone and PM
+lakename          | Provides data from studies on several neonicotinoids and their effects on mortality of
+year4             | 
+daynum            | Provides measurements in Ozone and PM
+sampledate        | 
+depth             | Provides measurements in Ozone and PM
+dissolvedOxygen   | Provides measurements in Ozone and PM
+irradianceWater   | Provides measurements in Ozone and PM
+irradianceDeck    | Provides measurements in Ozone and PM
+comments          | Provides measurements in Ozone and PM
+
 3. 'NTL-LTER_Lake_Nutrients_Raw.csv' file:
+
+
+Column Name       | Relevant Dataset Information
+------------------|--------------------------------------
+lakeid            | Provides measurements in Ozone and PM
+lakename          | Provides data from studies on several neonicotinoids and their effects on mortality of
+year4                   | 
+daynum                  | Provides measurements in Ozone and PM
+sampledate              | 
+depth                   | Provides measurements in Ozone and PM
+temperature_C           | Provides measurements in Ozone and PM
+temperature_C           | Provides measurements in Ozone and PM
+temperature_C           | Provides measurements in Ozone and PM
+temperature_C           | Provides measurements in Ozone and PM
+temperature_C           | Provides measurements in Ozone and PM
 
 
 ## Scripts and code
