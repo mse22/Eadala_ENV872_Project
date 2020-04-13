@@ -31,7 +31,7 @@ The datasets in this repository contain data from studies on several lakes in th
 
 Data were collected from the North Temperate Lakes Long Term Ecological Research website. More information can be found here: https://lter.limnology.wisc.edu/about/overview. Data were collected using the Data tool (https://lter.limnology.wisc.edu/data).
 
-From the Data homepage, the following were typed, searched: 
+From the Data homepage, the following were typed and searched: 
 1. *Cascade Project at North Temperate Lakes LTER Core Data Carbon 1984 - 2016*
 2. *Cascade Project at North Temperate Lakes LTER Core Data Physical and Chemical Limnology 1984 - 2016*
 3. *Cascade Project at North Temperate Lakes LTER Core Data Nutrients 1991 - 2016*
