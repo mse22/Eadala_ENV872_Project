@@ -1,21 +1,16 @@
-# Environmental Data Analytics Project by Monisha Eadala
+# Environmental Data Analytics Project *by Monisha Eadala*
 
 Final project repository for Environmental Data Analytics (ENV 872L) at Duke University, Spring 2020
 
-<General notes: add as much information as is relevant for your repository. Some overarching guidelines are provided, but feel free to expand on these guidelines.>
-<More resources found here: https://www.dataone.org/all-best-practices>
-
 ## Summary
 
-<describe the purpose of this repository, the information it contains, and any relevant analysis goals. What, why, where, when, how?>
+The repository contains the the relevant datasets (all versions - raw and processed), different aspects and the progress of my final project right from its inception to completion (code segragated as per different stages - processing, wrangling, data exploration, data analysis, final/compliled). This repository will aid in quality documentation, efficient data analysis, and future replication or improvisation plans. 
 
-The repository contains the the relevant datasets (all versions - raw and processed), different aspects and the progress of my final project right from its inception to completion (code segragated as per different stages - processing, wrangling, data exploration, data analysis, final/compliled). 
+My goal is to study water quality with the help of the NTL-LTER Lake Datasets provided to me through the Environmental Data Analytics class taught at Nicholas School of the Environment in Spring 2020. The datasets contains the concentrations of key minerals/nutrients and physical attributes measured in various lakes of Wisconsin. 
 
-My goal is to study water quality with the help of the NTL-LTER Lake Datasets provided to me through the Environmental Data Analytics class taught at Nicholas School of the Environment in Spring 2020.
+Eutrophication is a phenamenon caused due to excess of nutrients in water and it causes structural changes to the ecosystem in the form of increased production of algae and aquatic plants, depletion of fish species, general deterioration of water quality and other effects that reduce and preclude use. Therefore, it is important to observe and manage lakes and their nutrient loading from time to time to conserve water and its dependent ecosystems. 
 
-Eutrophication is a phenamenon caused due to excess of nutrients in water and it causes structural changes to the ecosystem in the form of increased production of algae and aquatic plants, depletion of fish species, general deterioration of water quality and other effects that reduce and preclude use. Therefore, it is important to observe and manage lakes and their nutrient loading from time to time to conserve water and other ecosystems dependent on it.
-
-Through this project, I hope to understand the causes of eutrophication and the correlations between the elements and nutrients measured in the datasets. I intent to answer my research questions through the data wrangling, processing, exploring, and visualization techniques taught in the class.
+Through this project, I hope to understand the causes of eutrophication and the correlations between the measure of elements and nutrients contianed in the datasets. I intent to answer my research questions through data wrangling, processing, exploring, and visualization techniques taught in class using the Wisconsin Lakes as the sample.
 
 ## Investigators
 
