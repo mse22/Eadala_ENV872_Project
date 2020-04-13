@@ -112,6 +112,8 @@ comments           | factor   | -       | Provides any additional comments
 
 ## Quality assurance/quality control
 
+This readme file provides for a quality assurance/control plan. All stages of the project will be stores in the form of R markdown  files and named according to the conventions highlights under "Folder structure, file formats, and naming conventions" above. Any potential errors or problems I may run into with the data will be recorded under a separate document (PDF or R markdown) that will reside in the "Other" folder of this respository. 
+
 <describe any relevant QA/QC procedures taken with your data. Some ideas can be found here:>
 <https://www.dataone.org/best-practices/develop-quality-assurance-and-quality-control-plan>
 <https://www.dataone.org/best-practices/ensure-basic-quality-control>
