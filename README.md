@@ -1,6 +1,6 @@
 # Environmental Data Analytics Project by Monisha Eadala
 
-Final project repository for Environmental Data Analytics (ENV 872L) at Duke University, spring 2020
+Final project repository for Environmental Data Analytics (ENV 872L) at Duke University, Spring 2020
 
 <Instructions: copy and paste this template into your project README file (found in the parent folder of the repository). Fill in relevant information as requested.>
 
@@ -22,7 +22,7 @@ Through this project and its relevant datasets, I hope to understand eutrophicat
 
 **Monisha Eadala**, Graduate Student - Master of International Devlolpment Policy, Class of 2020, Sanford School of Public Policy, Duke University
 
-For more information, please contact **Monisha Eadala** through *monisha.eadala@duke.edu*
+For more information, please contact Monisha Eadala through *monisha.eadala@duke.edu*
 
 ## Keywords
 
@@ -61,7 +61,7 @@ Column Name        | Class    | Units   |Relevant Dataset Information
 -------------------|----------|---------|----------------------------
 lakeid             | factor   | -       | Provides the IDs of the lakes either in the form of capital letters or words; for example, L, R, T, E, Tbog, Roach, Ward, etc. 
 lakename           | factor   | -       | Provides the names of the lakes; for example, Paul Lake, Peter Lake, Tuesday Lake, East Long Lake, etc.
-year4              | integer  | -       | Provides the year in which its respective data was collected in four digits
+year4              | integer  | -       | Provides the year in which its respective data was collected in four digits from 1984 to 2016
 daynum             | integer  | -       | Provides the number of the day on which its data was collected from from 1 to 366
 sampledate         | factor   | -       | Provides the date on which its data was collected in m/d/y format
 depth              | factor   | m       | Provides the depth at which the data sample was collected in meters
@@ -79,12 +79,11 @@ absorbance         | numeric  | Au      | Provides the measure of the capacity o
 
 This dataset contains the below column names and their relevant details:
 
-
 Column Name       | Class     | Units   | Relevant Dataset Information
 ------------------|-----------|---------|-----------------------------
 lakeid            | factor    | -       | Provides the IDs of the lakes either in the form of capital letters or words; for example, L, R, T, E, Tbog, Roach, Ward, etc. 
 lakename          | factor    | -       | Provides the names of the lakes; for example, Paul Lake, Peter Lake, Tuesday Lake, East Long Lake, etc.
-year4             | integer   | -       | Provides the year in which its respective data was collected in four digits
+year4             | integer   | -       | Provides the year in which its respective data was collected in four digits from 1984 to 2016
 daynum            | integer   | -       | Provides the number of the day on which its data was collected from from 1 to 366
 sampledate        | factor    | -       | Provides the date on which its data was collected in m/d/y format
 depth             | numeric   | m       | Provides the depth at which the data sample was collected in meters
@@ -102,7 +101,7 @@ Column Name        | Class    | Units   | Relevant Dataset Information
 -------------------|----------|---------|-----------------------------
 lakeid             | factor   | -       | Provides the IDs of the lakes either in the form of capital letters or words; for example, L, R, T, E, Tbog, Roach, Ward, etc. 
 lakename           | factor   | -       | Provides the names of the lakes; for example, Paul Lake, Peter Lake, Tuesday Lake, East Long Lake, etc.
-year4              | integer  | -       | Provides the year in which its respective data was collected in four digits
+year4              | integer  | -       | Provides the year in which its respective data was collected in four digits from 1991 to 2016
 daynum             | integer  | -       | Provides the number of the day on which its data was collected from from 1 to 366
 sampledate         | factor   | -       | Provides the date on which its data was collected in m/d/y format
 depth_id           | integer  | -       | Provides the depth level categorizied from -2 to 7; 1 represents 100% light, 2 represents 50% light, 3 represents 25% light; 4 represents 10% light, 5 represents 5% light, 6 represents 1% light, 7 means Hypolimnion, -1 means Epilimnion/PML, and -2 means Metalimnion
@@ -113,7 +112,6 @@ nh34               | numeric  | ug/L    | Provides the ammonia and ammonium conc
 no23               | numeric  | ug/L    | Provides the nitrite and nitrate concentration in micrograms per liter
 po4                | numeric  | ug/L    | Provides the phosphate concentration in micrograms per liter
 comments           | factor   | -       | Provides any additional comments
-
 
 ## Scripts and code
 
