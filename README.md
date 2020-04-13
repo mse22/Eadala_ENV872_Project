@@ -12,12 +12,11 @@ Final project repository for Environmental Data Analytics (ENV 872L) at Duke Uni
 
 <describe the purpose of this repository, the information it contains, and any relevant analysis goals. What, why, where, when, how?>
 
-The repository contains different aspects of the project and the progress of the project right from inception to completion. My goal is to study water quality with the help of the NTL-LTER Lake Datasets provided to us through the Environmental Data Analytics class taught at Nicholas School of the Environment in Spring 2020.
-
-I hope to understand some correlations that can be understood through this dataset, and answer research questions through the data wrangling, processing, exploring, and visualization techniques taught in the class. 
+The repository contains different aspects and the progress of the final project right from its inception to completion. My goal is to study water quality with the help of the NTL-LTER Lake Datasets provided to us through the Environmental Data Analytics class taught at Nicholas School of the Environment in Spring 2020.
 
 Eutrophication is a phenamenon caused due to excess of nutrients in water and it causes structural changes to the ecosystem in the form of increased production of algae and aquatic plants, depletion of fish species, general deterioration of water quality and other effects that reduce and preclude use. Therefore, it is important to observe and manage lakes and their nutrient loading from time to time to conserve water and other ecosystems dependent on it.
 
+Through this project and its relevant datasets, I hope to understand eutrophication and the correlations between certain elements and nutrients. I intent to answer my research questions through the data wrangling, processing, exploring, and visualization techniques taught in the class. 
 
 ## Investigators
 
@@ -42,7 +41,7 @@ The dataset contains data from studies on several lakes in the North Temperate L
 
 <describe your file naming conventions>
 
-The folders contained in the reposity are: 1. "Data" folder further subdivided into "raw" and "processed" folders that each contain their relevant csv files, 2. "Code" folder that contains the three R markdown files - processing & wrangling, data exploration and data analysis 3. Final project files in r markdown and PDF formats. 
+The folders contained in the reposity are: 1. "Data" folder further subdivided into "waw" and "processed" folders that each contain their relevant csv files, 2. "Code" folder that contains the three R markdown files - processing & wrangling, data exploration and data analysis 3. Final project files in r markdown and PDF formats. The files are either named as per their description of the data, or their function. For example, raw datasets in the initial stage are named "raw", while any dataset that has departed from the raw dataset is named "processed". The R markdown files are named according to the stages of the analysis. 
 
 ## Metadata
 
