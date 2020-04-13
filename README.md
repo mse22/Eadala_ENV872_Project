@@ -14,7 +14,10 @@ Final project repository for Environmental Data Analytics (ENV 872L) at Duke Uni
 
 The repository contains different aspects of the project and the progress of the project right from inception to completion. My goal is to study water quality with the help of the NTL-LTER Lake Datasets provided to us through the Environmental Data Analytics class taught at Nicholas School of the Environment in Spring 2020. The dataset contains data from studies on several lakes in the North Temperate Lakes District in Wisconsin, USA. Data were collected as part of the Long Term Ecological Research station established by the National Science Foundation. 
 
-I hope to understand some basic correlations that can be understood through this dataset, and answer research questions through the data wrangling, processing, exploring, and visualization techniques taught in the class. 
+I hope to understand some correlations that can be understood through this dataset, and answer research questions through the data wrangling, processing, exploring, and visualization techniques taught in the class. 
+
+Eutrophication is a phenamenon caused due to excess of nutrients in water and it causes structural changes to the ecosystem in the form of increased production of algae and aquatic plants, depletion of fish species, general deterioration of water quality and other effects that reduce and preclude use. Therefore, it is important to observe and manage lakes and their nutrient loading from time to time to conserve water and other ecosystems dependent on it.
+
 
 ## Investigators
 
@@ -32,6 +35,7 @@ I hope to understand some basic correlations that can be understood through this
 ## Folder structure, file formats, and naming conventions 
 
 <describe the folders contained in the repository, including what type of files they contain>
+The folders contained in the reposity are: 1. "Data" folder further subdivided into "raw" and "processed" folders that each contain their relevant csv files, 2. "Code" folder that contains the three R markdown files - processing & wrangling, data exploration and data analysis 3. Final project files in r markdown and PDF formats. 
 
 <describe the formats of files for the various purposes contained in the repository>
 
@@ -39,7 +43,21 @@ I hope to understand some basic correlations that can be understood through this
 
 ## Metadata
 
+Data were collected from the North Temperate Lakes Long Term Ecological Research website. More information can be found here: https://lter.limnology.wisc.edu/about/overview
+
+Data were collected using the Data tool (https://lter.limnology.wisc.edu/data).
+
 <For each data file in the repository, describe the data contained in each column. Include the column name, a description of the information, the class of data, and any units associated with the data. Create a list or table for each data file.> 
+
+There are three raw data filed in the repository:
+1. 'NTL-LTER_Lake_Carbon_Raw.csv' file: This  contains data relevant to dissolved organic and inorganic carbon, particulate organic matter, partial pressure of CO2 and absorbance at 440nm. It contains the below column names and their respective data:
+  a. 
+  b.
+  c.
+  d.
+2. 'NTL-LTER_Lake_ChemistryPhysics_Raw.csv' file: 
+3. 'NTL-LTER_Lake_Nutrients_Raw.csv' file:
+
 
 ## Scripts and code
 
