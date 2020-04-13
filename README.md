@@ -20,7 +20,7 @@ For more information, please contact Monisha Eadala through *monisha.eadala@duke
 
 ## Keywords
 
-Eutrophicatiom, Algal bloom, lake, Wisconsin, Water quality, Nitrogen, Phosphoros, Oxygen, Carbon, Temperature, Irradiance
+Eutrophicatiom, Algal bloom, Lake, Wisconsin, Water quality, Nitrogen, Phosphoros, Oxygen, Carbon, Temperature, Irradiance
 
 ## Database information
 
