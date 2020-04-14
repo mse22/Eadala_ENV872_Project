@@ -4,13 +4,13 @@ Final project repository for Environmental Data Analytics (ENV 872L) at Duke Uni
 
 ## Summary
 
-This repository contains the the relevant datasets (all versions - raw and processed), different aspects and the progress of my final project right from its inception to completion (code segragated as per different stages - processing, wrangling, data exploration, data analysis, final output). This repository will aid in quality documentation, efficient data analysis, and future replication or improvisation plans. 
+This repository contains the the relevant datasets (all versions - raw and processed), different aspects and the progress of my final project right from its inception to completion (code segragated according to different stages - processing, wrangling, data exploration, data analysis, final output). This repository will aid in quality documentation, efficient data analysis, and future replication or improvisation plans. 
 
 My goal is to study water quality with the help of the NTL-LTER Lake Datasets provided to me through the Environmental Data Analytics class taught at Nicholas School of the Environment in Spring 2020. The datasets contains the concentrations of key minerals/nutrients and physical attributes measured in various lakes of Wisconsin. 
 
-Eutrophication is a phenamenon caused due to excess of nutrients in water and it causes structural changes to the ecosystem in the form of increased production of algae and aquatic plants, depletion of fish species, general deterioration of water quality and other effects that reduce and preclude use. Therefore, it is important to observe and manage lakes and their nutrient loading from time to time to conserve water and its dependent ecosystems. 
+Eutrophication is a phenamenon caused due to excess of nutrients in water and it causes structural changes to the ecosystem in the form of increased production of algae and aquatic plants, depletion of fish species, general deterioration of water quality and other effects that can be detrimental in the long run as well. Therefore, it is important to observe and manage lakes and their nutrient loading from time to time to conserve water and its dependent ecosystems. 
 
-Through this project, I hope to understand the causes of eutrophication and the correlations between the measure of elements and nutrients contianed in the datasets. I intent to answer my research questions through data wrangling, processing, exploring, and visualization techniques taught in class using the Wisconsin Lakes as the sample.
+Through this project, I hope to understand the causes of eutrophication and the correlations between the measure of elements and nutrients contianed in the datasets. I intent to answer my research questions through data wrangling, processing, exploring, and visualization techniques that taught in class using the Wisconsin Lakes as the sample.
 
 ## Investigators
 
@@ -26,7 +26,7 @@ Eutrophicatiom, Algal bloom, Lake, Wisconsin, Water quality, Nitrogen, Phosphoro
 
 The datasets in this repository contain data from studies on several lakes in the North Temperate Lakes District in Wisconsin, USA. Data were collected as part of the Long Term Ecological Research station established by the National Science Foundation. 
 
-Data were collected from the North Temperate Lakes Long Term Ecological Research website. More information can be found here: https://lter.limnology.wisc.edu/about/overview. Data were collected using the Data tool (https://lter.limnology.wisc.edu/data).
+Data were collected from the North Temperate Lakes Long Term Ecological Research website (https://lter.limnology.wisc.edu/about/overview). Data were collected using the Data tool on the website (https://lter.limnology.wisc.edu/data).
 
 From the Data homepage, the following were typed and searched: 
 1. *Cascade Project at North Temperate Lakes LTER Core Data Carbon 1984 - 2016*
@@ -43,7 +43,7 @@ The folders contained in the reposity are:
 3. "Output" folder that contains the final project file in r markdown and PDF formats
 4. "Other" folder will contain files that do not fit any of the above-mentioned categories
 
-The files are either named as per their description of the data, or their function. For example, raw datasets in the initial stage are named "Raw", while any dataset that has departed from the raw dataset is named "Processed". The R markdown files stored in the 'Code' folder are named according to the stages of the analysis; for example, the code relevant to the processing and wrangling stages of the project are in the file named "Processions&Wranging" and the code relevant to the data exploration stage of the project is named "Data_exploration". The CSV files will be named according to their default name found in its source website, combined with important elements or column names that they contain and the type/stage of the data (whether raw or processed). 
+The files are either named as per the description of the data they contain or their function. The CSV files will be named according to their default name found in its source website, combined with important elements or column names that they contain and the type/stage of the data (whether raw or processed). For example, raw datasets collected from the the North Temperate Lakes Long Term Ecological Research website, in their untouched stage have the name "raw" attached to them in the end, while any dataset that has departed from the raw dataset has "processed" attached to their full name in the end. The R markdown files stored in the 'Code' folder are named according to the stages of the analysis; for example, the code relevant to the processing and wrangling stages of the project are in the file named "Processions&Wranging" and the code relevant to the data exploration stage of the project is named "Data_exploration". 
 
 ## Metadata
 
