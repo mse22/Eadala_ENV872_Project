@@ -4,7 +4,7 @@ Final project repository for Environmental Data Analytics (ENV 872L) at Duke Uni
 
 ## Summary
 
-This repository contains the the relevant datasets (all versions - raw and processed), different aspects and the progress of my final project right from its inception to completion (code segragated according to different stages - processing, wrangling, data exploration, data analysis, final output). This repository will aid in quality documentation, efficient data analysis, and future replication or improvisation plans. 
+This repository contains the the relevant datasets (all versions - raw and processed), different aspects and the progress of my final project right from its inception to completion (code segragated according to different stages - processing, wrangling, data exploration, data analysis, final output). This repository will aid in quality documentation, efficient data analysis, and any future replication or improvisation plans. 
 
 My goal is to study water quality with the help of the NTL-LTER Lake Datasets provided to me through the Environmental Data Analytics class taught at Nicholas School of the Environment in Spring 2020. The datasets contains the concentrations of key minerals/nutrients and physical attributes measured in various lakes of Wisconsin. 
 
