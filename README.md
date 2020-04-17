@@ -14,13 +14,13 @@ Through this project, I hope to understand the causes of eutrophication and the 
 
 ## Investigators
 
-**Monisha Eadala**, Graduate Student - Master of International Devlolpment Policy, Class of 2020, Sanford School of Public Policy, Duke University
+**Monisha Eadala**, Graduate Student - Master of International Development Policy, Class of 2020, Sanford School of Public Policy, Duke University
 
 For more information, please contact Monisha Eadala through *monisha.eadala@duke.edu*
 
 ## Keywords
 
-Eutrophicatiom, Algal bloom, Lake, Wisconsin, Water quality, Nitrogen, Phosphoros, Oxygen, Carbon, Temperature, Irradiance
+Eutrophication, Algal bloom, Lake, Wisconsin, Water quality, Nitrogen, Phosphoros, Dissolved oxygen, Temperature, Depth
 
 ## Database information
 
@@ -29,9 +29,8 @@ The datasets in this repository contain data from studies on several lakes in th
 Data were collected from the North Temperate Lakes Long Term Ecological Research website (https://lter.limnology.wisc.edu/about/overview). Data were collected using the Data tool on the website (https://lter.limnology.wisc.edu/data).
 
 From the Data homepage, the following were typed and searched: 
-1. *Cascade Project at North Temperate Lakes LTER Core Data Carbon 1984 - 2016*
-2. *Cascade Project at North Temperate Lakes LTER Core Data Physical and Chemical Limnology 1984 - 2016*
-3. *Cascade Project at North Temperate Lakes LTER Core Data Nutrients 1991 - 2016*
+1. *Cascade Project at North Temperate Lakes LTER Core Data Physical and Chemical Limnology 1984 - 2016*
+2. *Cascade Project at North Temperate Lakes LTER Core Data Nutrients 1991 - 2016*
 
 Each of relevant files were downloaded through "Download All Data (csv)" button. 
 
@@ -43,34 +42,14 @@ The folders contained in the reposity are:
 3. "Output" folder that contains the final project file in r markdown and PDF formats
 4. "Other" folder will contain files that do not fit any of the above-mentioned categories
 
-The files are either named as per the description of the data they contain or their function. The CSV files will be named according to their default name found in its source website, combined with important elements or column names that they contain and the type/stage of the data (whether raw or processed). For example, raw datasets collected from the the North Temperate Lakes Long Term Ecological Research website, in their untouched stage have the name "raw" attached to them in the end, while any dataset that has departed from the raw dataset has "processed" attached to their full name in the end. The R markdown files stored in the 'Code' folder are named according to the stages of the analysis; for example, the code relevant to the processing and wrangling stages of the project are in the file named "Processions&Wranging" and the code relevant to the data exploration stage of the project is named "Data_exploration". 
+The files are either named as per the description of the data they contain or their function. The CSV files will be named according to their default name found in its source website, combined with important elements or column names that they contain and the type/stage of the data (whether raw or processed). For example, raw datasets collected from the the North Temperate Lakes Long Term Ecological Research website, in their untouched stage have the name "raw" attached to them in the end, while any dataset that has departed from the raw dataset has "processed" attached to their full name in the end. The R markdown files stored in the 'Code' folder are named according to the stages of the analysis; for example, the code relevant to the processing and wrangling stages of the project are in the file named "Processing&Wranging" and the code relevant to the data exploration stage of the project is named "Data_exploration". 
 
 ## Metadata
 
-There are three raw data filed in the repository:
-1. 'NTL-LTER_Lake_Carbon_Raw.csv' file: This contains data relevant to dissolved organic and inorganic carbon, particulate organic matter, partial pressure of CO2 and absorbance at 440nm. Samples were collected with a Van Dorn sampler. Organic carbon and absorbance samples were collected from the epilimnion, metalimnion, and hypolimnion (upper, intermediate, and lower layers of the stratified lakes respectively). Inorganic samples were collected at depths corresponding to 100%, 50%, 25%, 10%, 5%, and 1% of surface irradiance, as well as one sample from the hypolimnion. Samples for the partial pressure of CO2 were collected from two meters above the lake surface (air) and just below the lake surface (water). Sampling frequency varies, and the number of site are 14. (As noted in https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-ntl.350.6)
+There are two raw data filed in the repository:
+wavelength in absorbance units
 
-This dataset contains the below column names and their relevant details:
-
-Column Name        | Class    | Units   |Relevant Dataset Information
--------------------|----------|---------|----------------------------
-lakeid             | factor   | -       | Provides the IDs of the lakes either in the form of capital letters or words; for example, L, R, T, E, Tbog, Roach, Ward, etc. 
-lakename           | factor   | -       | Provides the names of the lakes; for example, Paul Lake, Peter Lake, Tuesday Lake, East Long Lake, etc.
-year4              | integer  | -       | Provides the year in which its respective data was collected in four digits from 1984 to 2016
-daynum             | integer  | -       | Provides the number of the day on which its data was collected from from 1 to 366
-sampledate         | factor   | -       | Provides the date on which its data was collected in m/d/y format
-depth              | factor   | m       | Provides the depth at which the data sample was collected in meters
-depth_id           | integer  | -       | Provides the depth level categorizied from -2 to 7; 1 represents 100% light, 2 represents 50% light, 3 represents 25% light; 4 represents 10% light, 5 represents 5% light, 6 represents 1% light, 7 means Hypolimnion, -1 means Epilimnion/PML, and -2 means Metalimnion
-tpc                | numeric  | mg/L    | Provides the total particulate carbon
-tpn                | numeric  | mg/L    | Provides the total particulate nitrogen
-DIC_mg             | numeric  | mg/L    | Provides the dissolved inorganic carbon measured in milligrams per liter
-DIC_uM             | numeric  | uM/L    | Provides the dissolved inorganic carbon measured in micro-mole per liter
-air_pco2           | numeric  | uatm    | Provides the partial pressure of CO2 (pCO2) is the amount of free CO2 in air
-water_pco2         | numeric  | uatm    | Provides the partial pressure of aqueous CO2 (pCO2) is the amount of free CO2 in water
-doc                | numeric  | mg/L    | Provided the dissolved organic carbon concentration
-absorbance         | numeric  | Au      | Provides the measure of the capacity of the water to absorb light of a certain wavelength in absorbance units
-
-2. 'NTL-LTER_Lake_ChemistryPhysics_Raw.csv' file: This contains data relevant to physical and chemical variables (such as temperature, dissolved oxygen, and irradiance) that are measured at one central station near the deepest point of each lake. In most cases these measurements are made in the morning (8 to 9 am). Vertical profiles are taken at varied depth intervals. Chemical measurements are sometimes made in a pooled mixed layer sample (PML); sometimes in the epilimnion, metalimnion, and hypolimnion; and sometimes in vertical profiles. In the latter case, depths for sampling usually correspond to the surface plus depths of 50%, 25%, 10%, 5% and 1% of surface irradiance. (As noted in https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-ntl.352.3)
+1. 'NTL-LTER_Lake_ChemistryPhysics_Raw.csv' file: This contains data relevant to physical and chemical variables (such as temperature, dissolved oxygen, and irradiance) that are measured at one central station near the deepest point of each lake. In most cases these measurements are made in the morning (8 to 9 am). Vertical profiles are taken at varied depth intervals. Chemical measurements are sometimes made in a pooled mixed layer sample (PML); sometimes in the epilimnion, metalimnion, and hypolimnion; and sometimes in vertical profiles. In the latter case, depths for sampling usually correspond to the surface plus depths of 50%, 25%, 10%, 5% and 1% of surface irradiance. (As noted in https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-ntl.352.3)
 
 This dataset contains the below column names and their relevant details:
 
@@ -84,11 +63,11 @@ sampledate        | factor    | -       | Provides the date on which its data wa
 depth             | numeric   | m       | Provides the depth at which the data sample was collected in meters
 temperature_C     | numeric   | C       | Provides the water temperature in celcius
 dissolvedOxygen   | numeric   | mg/L    | Provides the dissolved oxygen measurement in milligrams per liter
-irradiancewWater  | numeric   | uE      | Provides the photosynthetically active radiation measured in the water column in micro-Einstein 
-irradianceDeck    | numeric   | uE      | Provies the photosynthetically active radiation measured on the deck of the sampling boat in micro-Einstein
+irradianceWater   | numeric   | uE      | Provides the photosynthetically active radiation measured in the water column in micro-Einstein 
+irradianceDeck    | numeric   | uE      | Provides the photosynthetically active radiation measured on the deck of the sampling boat in micro-Einstein
 comments          | factor    | -       | Provides the comments noting departure from standard procedure 
 
-3. 'NTL-LTER_Lake_Nutrients_Raw.csv' file: This contains the data relevant to physical and chemical variables (such as total nitrogen, total phosphorius, ammonia and ammonium, nitrite and nitrate, and phosphate concentrations) that are measured at one central station near the deepest point of each lake. In most cases these measurements are made in the morning (8 to 9 am). Vertical profiles are taken at varied depth intervals. Chemical measurements are sometimes made in a pooled mixed layer sample (PML); sometimes in the epilimnion, metalimnion, and hypolimnion; and sometimes in vertical profiles. In the latter case, depths for sampling usually correspond to the surface plus depths of 50%, 25%, 10%, 5% and 1%t of surface irradiance. The 1991-1999 chemistry data was obtained from the Lachat auto-analyzer. Like the process data, there are up to seven samples per sampling date due to Van Dorn collections across a depth interval according to percent irradiance. Voichick and LeBouton (1994) describe the autoanalyzer procedures in detail. Nutrient samples were sent to the Cary Institute of Ecosystem Studies for analysis beginning in 2000. The Kjeldahl method for measuring nitrogen is not used at IES, and so measurements reported from 2000 onwards are Total Nitrogen. (As noted in https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-ntl.351.3)
+2. 'NTL-LTER_Lake_Nutrients_Raw.csv' file: This contains the data relevant to physical and chemical variables (such as total nitrogen, total phosphorius, ammonia and ammonium, nitrite and nitrate, and phosphate concentrations) that are measured at one central station near the deepest point of each lake. In most cases these measurements are made in the morning (8 to 9 am). Vertical profiles are taken at varied depth intervals. Chemical measurements are sometimes made in a pooled mixed layer sample (PML); sometimes in the epilimnion, metalimnion, and hypolimnion; and sometimes in vertical profiles. In the latter case, depths for sampling usually correspond to the surface plus depths of 50%, 25%, 10%, 5% and 1%t of surface irradiance. The 1991-1999 chemistry data was obtained from the Lachat auto-analyzer. Like the process data, there are up to seven samples per sampling date due to Van Dorn collections across a depth interval according to percent irradiance. Voichick and LeBouton (1994) describe the autoanalyzer procedures in detail. Nutrient samples were sent to the Cary Institute of Ecosystem Studies for analysis beginning in 2000. The Kjeldahl method for measuring nitrogen is not used at IES, and so measurements reported from 2000 onwards are Total Nitrogen. (As noted in https://portal.edirepository.org/nis/metadataviewer?packageid=knb-lter-ntl.351.3)
 
 This dataset contains the below column names and their relevant details:
 
@@ -117,4 +96,4 @@ Code will be included in three seperate R markdown files in the folder 'Code':
 
 ## Quality assurance/quality control
 
-This readme file provides for a quality assurance/control plan. All stages of the project will be stores in the form of R markdown  files and named according to the conventions highlighted under *Folder structure, file formats, and naming conventions* above. Any potential errors or problems I may run into with the data will be recorded under a separate document (PDF or R markdown) that will reside in the 'Other' folder of this respository. Also, changes made to any files will be pushed to the git repository on daily basis for quality check purposes.
+This readme file provides for a quality assurance/control plan. All stages of the project will be stores in the form of R markdown files and named according to the conventions highlighted under *Folder structure, file formats, and naming conventions* above. Any potential errors or problems I may run into with the data will be recorded under a separate document (PDF or R markdown) that will reside in the 'Other' folder of this respository. Also, changes made to any files will be pushed to the git repository on daily basis for quality check purposes.
