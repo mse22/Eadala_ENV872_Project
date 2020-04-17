@@ -1,0 +1,100 @@
+---
+title: "Insert title of project here"
+author: "Monisha"
+geometry: margin=2.54cm
+output:
+  word_document: default
+  pdf_document:
+    fig_caption: yes
+    keep_tex: yes
+    number_sections: yes
+mainfont: Times New Roman
+subtitle: Web address for GitHub repository
+fontsize: 12pt
+---
+
+\newpage
+\tableofcontents 
+\newpage
+\listoftables 
+\newpage
+\listoffigures 
+\newpage
+
+```{r setup, include=FALSE}
+# Set your working directory
+setwd("~/Environmental_Data_Analytics_2020")
+# Load your packages
+library(tidyverse)
+library(knitr)
+# Set your ggplot theme
+NK.theme <- theme_light(base_size = 12) +
+  theme(plot.background = element_rect(fill = "grey97"),
+        panel.grid.major =element_line(linetype = "dotted"),
+        panel.grid.minor = element_line(linetype = "dotted"), text=element_text(size = 14, 
+color = "black", face = "bold"),
+        axis.text = element_text(color = "grey40"), 
+        legend.position = "right",
+        legend.text = element_text(color = "grey40"))
+# Load your datasets
+Nutrients_data <- read.csv("./Data/Raw/NTL-LTER_Lake_Nutrients_Raw.csv")
+```
+
+
+# Rationale and Research Questions
+The measurement of eutrophication is not an easy task. The aquatic ecosystem is very complex by constant interactions between physical, chemical and biological components. There are several indicators available to assess the degree of eutrophication. Nutrients such as phosphorus, phosphate, nitrogen and nitrates are the main elements that can be analized since high concentrations of these nutrients will mean more algae growth.
+
+The presence of sufficient dissolved oxygen in the water column is very important for all aquatic life. Eutrophic waters (rich in nutrients) have fluctuating amounts of dissolved oxygen. Algae consume oxygen. A great algal biomass can therefore provide very low concentrations of oxygen in the water, sometimes so low that even fish can not survive and die.
+
+Water transparancy
+This parameter indicates the amount of light that can penetrate into the water. Many algae can keep out of the light causing an increase of turbidity. A common method for measuring this parameter is a Secchi disk. The disc is being lowered into the water and the depth at which the disc is no longer visible, is a measure of the clarity of the water.
+
+All of the above indicators are available through the two datasets: "" and ""
+
+Research Question: What are the trends with respect to nutrients, temperature, depth, dissolved oxygen, DIC, DOC, and irradiance 
+
+Are the concentrations of nutrients, dissolved oxygen and water transparency consistent across all lakes in the months of _____ to to indicate eutrophication. 
+
+Temperature affects the growth of plants, the release of nutrients, and the mixing of layers of water in the lake. Temperature measurements can determine if mixing occurs, moving nutrients from the lake bottom up into the surface waters promoting algae blooms.
+
+\newpage
+
+# Dataset Information
+
+
+
+Parameter                      | Summary
+-------------------------------|--------------------------------------
+EPA Air pollutants measurement | Provides measurements in Ozone and PM
+EXOTOX                         | Provides data from studies on several neonicotinoids and their effects on mortality of various organisms
+
+\newpage
+
+# Exploratory Analysis 
+```{r}
+# read in nutrient data
+
+
+```
+\newpage
+
+# Analysis
+
+
+
+## Question 1: <insert specific question here and add additional subsections for additional questions below, if needed>
+
+## Question 2: 
+
+
+
+
+\newpage
+
+# Summary and Conclusions
+
+
+\newpage
+
+# References
+<add references here if relevant, otherwise delete this section> 
