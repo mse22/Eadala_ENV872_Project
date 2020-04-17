@@ -28,33 +28,29 @@ head(Nutrients_data)
 Nutrients_data$sampledate <- as.Date(Nutrients_data$sampledate,
 format = "%m/%d/%y")
 
-head(DIC_data)
-DIC_data$sampledate <- as.Date(DIC_data$sampledate,
-format = "%m/%d/%y")
-
 head(O_data)
 O_data$sampledate <- as.Date(O_data$sampledate,
 format = "%m/%d/%y")
 
-Nutrients_data_processed <- Nutrients_data %>%
-  select(-lakeid,-depth_id,-comments) %>%
-  filter(depth == 0)
+list(unique(O_data$lakename))
+list(unique(Nutrients_data$lakename))
 
-DIC_data_processed <- DIC_data %>%
-  select(-lakeid,-depth_id) %>%
-  filter(depth == 0)
+Nutrients_data_processed <- Nutrients_data %>%
+  select(-lakeid,-comments) %>%
+  filter(lakename == "Paul Lake" | lakename == "Peter Lake" | lakename == "Tuesday Lake" | lakename == "Hummingbird Lake" | lakename == "Crampton Lake" | lakename == "Ward Lake") %>%
+  filter(year4 == 2011 | year4 == 2012 | year4 == 2013 | year4 == 2014 | year4 == 2015 | year4 == 2016)
 
 O_data_processed <- O_data %>%
-  select(-lakeid, -comments) %>%
-  filter(depth == 0)
+  select(-comments) %>% 
+  filter(lakename == "Paul Lake" | lakename == "Peter Lake" | lakename == "Tuesday Lake" | lakename == "Hummingbird Lake" | lakename == "Crampton Lake" | lakename == "Ward Lake") %>%
+  filter(year4 == 2011 | year4 == 2012 | year4 == 2013 | year4 == 2014 | year4 == 2015 | year4 == 2016)
 
+Combined_data <- full_join(Nutrients_data_processed, O_data_processed)
+list(unique(Combined_data$lakename))
 
-class(Nutrients_data_processed$depth)
-class(DIC_data_processed$depth)
-DIC_data_processed$depth <- as.numeric(DIC_data_processed$depth)
-class(DIC_data_processed$depth)
+list(unique(O_data_processed$year4))
+list(unique(Nutrients_data_processed$year4))
 
-Combined_data <- full_join(Nutrients_data_processed, DIC_data_processed)
 
 
 Nutrients_summary.tn <- Nutrients_data_processed %>%
@@ -81,6 +77,8 @@ ggplot(Nutrients_data_processed, aes(x = as.POSIXct(sampledate), y = tp_ug, colo
   xlab("Date (year)") +
   ylab("Total Phosphorus (\U003BCg/L)") +
   scale_x_datetime(date_breaks = "1 year", labels = date_format("%Y"))
+
+
 
 year1991_Nutrients_data_processed <- Nutrients_data %>%
   select(-lakeid,-depth_id,-comments) %>%
@@ -124,8 +122,6 @@ Nutrients_summary.ratio <- Nutrients_data_processed %>%
             maximum.NPRatio = max(NPRatio, na.rm = TRUE),
             Standard.dev.NPRatio = sd(NPRatio, na.rm = TRUE))
 
-list(unique(Nutrients_data$depth_id))
-class(Nutrients_data$comments)
 ```
 
 ## R Markdown
