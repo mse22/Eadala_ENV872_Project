@@ -1,0 +1,95 @@
+---
+title: "Insert title of project here"
+author: "Monisha Eadala"
+geometry: margin=2.54cm
+output:
+  word_document: default
+  pdf_document:
+    fig_caption: yes
+    keep_tex: yes
+    number_sections: yes
+mainfont: Times New Roman
+subtitle: https://github.com/mse22/Eadala_ENV872_Project 
+fontsize: 12pt
+---
+
+\newpage
+\tableofcontents 
+\newpage
+\listoftables 
+\newpage
+\listoffigures 
+\newpage
+
+```{r setup, include=FALSE}
+# Set your working directory
+setwd("~/Environmental_Data_Analytics_2020")
+# Load your packages
+library(tidyverse)
+library(knitr)
+# Set your ggplot theme
+NK.theme <- theme_light(base_size = 12) +
+  theme(plot.background = element_rect(fill = "grey97"),
+        panel.grid.major =element_line(linetype = "dotted"),
+        panel.grid.minor = element_line(linetype = "dotted"), text=element_text(size = 14, 
+color = "black", face = "bold"),
+        axis.text = element_text(color = "grey40"), 
+        legend.position = "right",
+        legend.text = element_text(color = "grey40"))
+# Load your datasets
+Nutrients_data <- read.csv("./Data/Raw/NTL-LTER_Lake_Nutrients_Raw.csv")
+```
+
+
+# Rationale and Research Questions
+
+The measurement of eutrophication is not an easy task. The aquatic ecosystem is very complex by constant interactions between physical, chemical and biological components. There are several indicators available to assess the degree of eutrophication. Nutrients such as phosphorus, phosphate, nitrogen and nitrates are the main elements that can be analyzed since high concentrations of these nutrients will mean more algae growth.
+
+The presence of sufficient dissolved oxygen in the water column is very important for all aquatic life. Eutrophic waters (rich in nutrients) have fluctuating amounts of dissolved oxygen. Algae consume oxygen. A great algal biomass can therefore provide very low concentrations of oxygen in the water, sometimes so low that even fish can not survive and die.
+
+Therefore, I hope to analyze variables such as total nitrogen, total phosphorus, dissolved oxygen, Depth, temperature (in Celsius), months, days and years to better understand aspects of the eutrophication and lake water quality in general.
+
+Research Question 1: What are the best set of predictors of dissolved oxygen across the monitoring period from 1991 to 2016 at the eight North Temperate Lakes in Wisconsin.
+
+Research Question 2: What is the average nitrogen:phosphorus ratio for the eight North Temperate Lakes at a depth below 1 meter? What relationship does the average ratio for all the eight lakes have on their average dissolved oxygen? Are most of the lakes phosphorus deficient or nitrogen deficient?
+
+\newpage
+
+# Dataset Information
+
+
+Parameter                      | Summary
+-------------------------------|--------------------------------------
+EPA Air pollutants measurement | Provides measurements in Ozone and PM
+EXOTOX                         | Provides data from studies on several neonicotinoids and their effects on mortality of various organisms
+
+\newpage
+
+# Exploratory Analysis 
+```{r}
+# read in nutrient data
+
+
+```
+\newpage
+
+# Analysis
+
+
+
+## Question 1: <insert specific question here and add additional subsections for additional questions below, if needed>
+
+## Question 2: 
+
+
+
+
+\newpage
+
+# Summary and Conclusions
+
+
+\newpage
+
+# References
+<add references here if relevant, otherwise delete this section> 
