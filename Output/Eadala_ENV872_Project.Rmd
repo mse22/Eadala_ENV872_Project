@@ -76,7 +76,6 @@ EXOTOX                         | Provides data from studies on several neonicoti
 # Analysis
 
 
-
 ## Question 1: <insert specific question here and add additional subsections for additional questions below, if needed>
 
 ## Question 2: 
