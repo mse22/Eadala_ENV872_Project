@@ -1,0 +1,181 @@
+---
+title: "Data Exploration"
+author: "Monisha Eadlaa"
+date: "4/19/2020"
+output:
+  word_document: default
+  pdf_document: default
+geometry: margin=2.54cm
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+# Set your working directory
+setwd("~/Eadala_Project_Environmental_Data_Analytics")
+# Load your packages
+library(tidyverse)
+library(knitr)
+# Set your ggplot theme
+mytheme <- theme_light(base_size = 12) +
+  theme(plot.background = element_rect(fill = "grey97"),
+        panel.grid.major =element_line(linetype = "dotted"),
+        panel.grid.minor = element_line(linetype = "dotted"), text=element_text(size = 14, 
+color = "black", face = "bold"),
+        axis.text = element_text(color = "grey40"), 
+        legend.position = "right",
+        legend.text = element_text(color = "grey40"))
+theme_set(mytheme)
+
+```
+
+# Uploading the Nutrients and ChemistryPhysics raw data files associated with the NTL-LTER lakes datasets and formating the date column of each.
+
+```{r}
+# Load your datasets
+Nutrients_raw <- read.csv("./Data/Raw/NTL-LTER_Lake_Nutrients_Raw.csv")
+ChemistryPhysics_raw <- read.csv("./Data/Raw/NTL-LTER_Lake_ChemistryPhysics_Raw.csv")
+
+head(Nutrients_raw)
+Nutrients_raw$sampledate <- as.Date(Nutrients_raw$sampledate,
+format = "%m/%d/%y")
+
+head(ChemistryPhysics_raw)
+ChemistryPhysics_raw$sampledate <- as.Date(ChemistryPhysics_raw$sampledate,
+format = "%m/%d/%y")
+
+```
+
+# Data exploration of the Nutrients and ChemistryPhysics raw data files associated with the NTL-LTER lakes datasets
+
+```{r}
+dim(Nutrients_raw)
+dim(ChemistryPhysics_raw)
+str(Nutrients_raw)
+str(ChemistryPhysics_raw)
+colnames(Nutrients_raw)
+colnames(ChemistryPhysics_raw)
+summary(Nutrients_raw)
+summary(ChemistryPhysics_raw)
+
+```
+
+## Plots
+
+
+```{r}
+TN.FreqPol.plot <- ggplot(Nutrients_raw) +
+  geom_freqpoly(aes(x = tn_ug, color = lakename), bins = 50) +
+  xlab("Total Nitrogen Concentration (µg/l)") + # To label the x axis
+  ylab("Count") + # To label the y axis
+  labs (color = "Lake Name") # To label the legend
+print(TN.FreqPol.plot)
+
+TN.Box.plot <- ggplot(Nutrients_raw) +
+  geom_boxplot(aes(x = lakename, y = tn_ug, color = lakename)) +
+  theme(axis.text.x = element_text(angle = 60, hjust = 1)) +
+  theme(legend.position="none") + # To removes the legend
+  xlab("Lake Name") + # To label the x axis
+  ylab("TN (µg/l)") # To label the y axis
+print(TN.Box.plot)
+
+TN.Scatter.plot <- ggplot(Nutrients_raw, aes(x = sampledate, y = tn_ug, color = lakename)) +
+  geom_point() +
+  stat_smooth(color = "black") +
+  xlab("Lake Name") + # To label the x axis
+  ylab("TN (µg/l)") + # To label the y axis
+  labs (color = "Lake Name") # To label the legend
+print(TN.Scatter.plot)
+
+DO.Scatter.plot <- ggplot(ChemistryPhysics_raw, aes(x = sampledate, y = dissolvedOxygen, color = lakename)) +
+  geom_point() +
+  stat_smooth(color = "black") +
+  ylim(0,25) + # To remove the outliers
+  xlab("Lake Name") + # To label the x axis
+  ylab("Dissolved Oxygen (mg/L)") + # To label the y axis
+  labs (color = "Lake Name") # To label the legend
+print(DO.Scatter.plot)
+```
+
+# Data Exploring: What is the average nitrogen:phosphorus ratio for each of the six north temperate lakes? Are the lakes phosphorus or nitrogen deficient? 
+
+A Redfield ratio N:P of 16:1 by moles in general indicates a roughly balanced supply of N and P, and algae assemblages tend to mirror this ratio fairly closely when growing under balanced growth conditions (https://www.sciencedirect.com/topics/earth-and-planetary-sciences/redfield-ratio). Converting the molar ratio to migrogram ratio gives us N:P of 7.24:1, since 1 mole of N = 14.0067g and 1 mole of P = 30.973761g (https://www.convertunits.com/from/grams+Nitrogen/to/moles; https://www.convertunits.com/from/grams+Phosphorus/to/moles)
+
+```{r}
+#To exlude some of the valariables from the dataset so that the number of NAs in the dataset could be minimized
+NitrogenPhosphorus <- Combined_processed %>%
+  select(-temperature_C) %>%
+  na.exclude()
+
+# Save the new folder
+write.csv(NitrogenPhosphorus, row.names = FALSE, file = "./Data/Processed/NitrogenPhosphorus_processed.csv")
+
+# To understand if most of the lakes are above or below the Redfield Ratio - to understand of most of the lakes are phosphorus or nitrogen limited
+NP.plot <- ggplot(NitrogenPhosphorus, aes(x = tp_ug, y = tn_ug, color = lakename)) +
+  geom_point(alpha = 0.75) +
+  geom_abline(slope = 7.24, intercept = 0, linetype = "dashed") +
+  annotate("text", x = 40, y = 30 * 7.24, angle = atan(7.24 * 4) * 35/pi, label = "Redfield Ratio", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "blue") +
+  scale_color_brewer(palette = "Set1", direction = 1) +
+  ggtitle("(a)") + # To insert the main title
+  theme(plot.title = element_text(size = 14, face = "bold")) +
+  theme(axis.text=element_text(size=12),
+        axis.title=element_text(size=12,face="bold")) + 
+  theme(legend.title = element_text(size = 12), legend.text=element_text(size=12)) +
+  xlab("P (µg/l)") + # To label the x axis
+  ylab("N (µg/l)") + # To label the y axis
+  labs (color = "Lake Name") + # To label the legend
+  xlim(0,65)
+print(NP.plot) # Gives the N vs P plot #Tells us that most of the Lakes are phosphorus deficient, therefore phosphorus should be the limiting nutrient addressed in the water management
+
+NitrogenPhosphorus$NPRatio <- NitrogenPhosphorus$tn_ug / NitrogenPhosphorus$tp_ug #gives us a new colum with the N:P ratio
+
+# To summarize the N:P ratio in each lake 
+NPRatio.summary <- NitrogenPhosphorus %>%
+   group_by(lakename) %>%
+  summarise(mean.NPRatio = mean(NPRatio, na.rm = TRUE),
+            minimum.NPRatio = min(NPRatio, na.rm = TRUE),
+            maximum.NPRatio = max(NPRatio, na.rm = TRUE),
+            Standard.dev.NPRatio = sd(NPRatio, na.rm = TRUE)) # Gives us summary stats of each of the lakes with respect to N:P
+
+# to understand the distriution of N:P ratio in each lake
+NPRatio.boxplot <- ggplot(NitrogenPhosphorus, aes(x = depth, y = NPRatio)) +
+  geom_boxplot(aes(color = lakename)) +
+  scale_color_brewer(palette = "Set1", direction = 1) +
+  geom_hline(yintercept = 7.24, linetype = "dashed") +
+  annotate("text", x=4, y=2, label="Redfield Ratio", size = 3) +
+  ggtitle("(b)") + # To insert the main title 
+  theme(plot.title = element_text(size = 14, face = "bold")) +
+  theme(axis.text=element_text(size=12),
+        axis.title=element_text(size=12,face="bold")) + 
+  theme(legend.title = element_text(size = 12), legend.text=element_text(size=12)) +
+  xlab("Depth (m)") + # To label the x axis
+  ylab("N:P") + # To label the y axis
+  labs (color = "Lake Name") + # To label the legend
+  ylim(0,200)
+print(NPRatio.boxplot) # Gives us the individual boxplots of the lakes with respect to their N:P
+
+# Since all the lakes are phosphoshorus deficient, has water management practices managed to reduce the phosphorus over the years?
+NP.years.plot <- ggplot(NitrogenPhosphorus, aes(x = year4, y = tp_ug, color = lakename)) +
+  geom_point(alpha = 0.75) +
+  geom_smooth(method = "lm", se = FALSE, color = "blue") +
+  scale_color_brewer(palette = "Set1", direction = 1) +
+  ggtitle("") + # To insert the main title
+  theme(legend.title = element_text(size = 12), legend.text=element_text(size=12)) +
+  xlab("Years") + # To label the x axis
+  ylab("TP (µg/l)") + # To label the y axis
+  labs (color = "Lake Name") # To label the legend
+print(NP.years.plot) # Gives the N vs P plot; tells us that there has been a decrease in phosphorus concentration over the years.
+```
+
+Figure for slack showcase.
+
+```{r fig1, echo=FALSE,message=FALSE,include=TRUE,fig.cap=" (a) Total nitrogen concentration versus total phosphorus concentration from the 6 Wisconsin lakes data collected over the years 1991–2016. Dashed line indicates the Redfield Ratio of 7.24:1, which indicates optimal conditions for phytoplankton growth. (b) Distribution of N:P ratios in the same dataset."}
+library(cowplot)
+
+NP.plot = NP.plot + theme(legend.position="none") # Removes the legend from the plot
+NPRatio.boxplot = NPRatio.boxplot + theme(legend.position ="right", legend.title = element_text(size = 7), legend.text = element_text(size = 7)) # Asserts the position of the legend on the right side of the plot
+plot_grid(NP.plot, NPRatio.boxplot, nrow = 1, align = 'h', rel_widths = c(1, 1.45)) # Combines all the three plots
+
+```
+
