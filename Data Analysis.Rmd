@@ -57,16 +57,6 @@ Combined_processed <- full_join(Nutrients_processed, ChemistryPhysics_processed)
   filter(lakename == "Paul Lake" | lakename == "Peter Lake" | lakename == "East Long Lake" | lakename == "West Long Lake" | lakename == "Tuesday Lake" | lakename == "Crampton Lake")
 
 write.csv(Combined_processed, row.names = FALSE, file = "./Data/Processed/Combined_processed.csv")
-
-```
-### Data Analysis
-
-# Research question 1:
-#a. What is the average nitrogen:phosphorus ratio for each of the six north temperate lakes? Are the lakes phosphorus or nitrogen deficient? 
-#b. Have the lakes been within the limiting nutrient criteria over the years? How does the N:P ratio impact the dissolved oxygen in the lakes?
-
-A Redfield ratio N:P of 16:1 by moles in general indicates a roughly balanced supply of N and P, and algae assemblages tend to mirror this ratio fairly closely when growing under balanced growth conditions (https://www.sciencedirect.com/topics/earth-and-planetary-sciences/redfield-ratio). Converting the molar ratio to migrogram ratio gives us N:P of 7.24:1, since 1 mole of N = 14.0067g and 1 mole of P = 30.973761g (https://www.convertunits.com/from/grams+Nitrogen/to/moles; https://www.convertunits.com/from/grams+Phosphorus/to/moles)
-```{r}
 #To exlude some of the valariables from the dataset so that the number of NAs in the dataset could be minimized
 NitrogenPhosphorus <- Combined_processed %>%
   select(-temperature_C) %>%
@@ -127,20 +117,14 @@ NP.years.plot <- ggplot(NitrogenPhosphorus, aes(x = year4, y = tp_ug, color = la
   xlab("Years") + # To label the x axis
   ylab("TP (µg/l)") + # To label the y axis
   labs (color = "Lake Name") # To label the legend
-print(NP.years.plot) # Gives the N vs P plot; tells us that there has been a decrease in phosphorus concentration over the years. 
-
+print(NP.years.plot) # Gives the N vs P plot; tells us that there has been a decrease in phosphorus concentration over the years.
 ```
 
-```{r fig1, echo=FALSE,message=FALSE,include=TRUE,fig.cap=" (a) Total nitrogen concentration versus total phosphorus concentration from the 6 Wisconsin lakes data collected over the years 1991–2016. Dashed line indicates the Redfield Ratio of 7.24:1, which indicates optimal conditions for phytoplankton growth. (b) Distribution of N:P ratios in the same dataset."}
-
-library(cowplot)
-
-NP.plot = NP.plot + theme(legend.position="none") # Removes the legend from the plot
-NPRatio.boxplot = NPRatio.boxplot + theme(legend.position ="right", legend.title = element_text(size = 7), legend.text = element_text(size = 7)) # Asserts the position of the legend on the right side of the plot
-plot_grid(NP.plot, NPRatio.boxplot, nrow = 1, align = 'h', rel_widths = c(1, 1.45)) # Combines all the three plots
-```
+# Data Analysis
 
 ## One-sample t-test
+
+### Research question 1: Have the lakes been within the limiting nutrient criteria over the years? How does the N:P ratio impact the dissolved oxygen in the lakes?
 
 The above figures tells us that all the eight lakes are phosphorus deficient, and therefore phosphorus is the element that needs to be controlled on priority to avoid eutrophication. EPA has compiled state, territorial, and authorized tribal water quality standards that EPA has approved or are otherwise in effect for Clean Water Act purposes. According to this compilation, Wisconsin's stratified lakes' total phosphorus criterion is not more than 30µg/l (https://www.epa.gov/wqs-tech/state-specific-water-quality-standards-effective-under-clean-water-act-cwa#tb2). According to Carlson R.E. and J. Simpson in 1996, phosphorus concentration between 24µg/l and 96µg/l suggests eutrophic conditions, and anything above 96µg/l suggests hypereutrophic conditions (https://en.wikipedia.org/wiki/Trophic_state_index). Therefore, it is important to check if the eight North Temperate Lakes are at least within the 30µg/l criterion or not. 
 
@@ -192,12 +176,12 @@ NPRatio.plot <- ggplot(NitrogenPhosphorus, aes(x = NPRatio, y = dissolvedOxygen,
   xlim(0,150)
 print(NPRatio.plot)
 ```
+
 This visual tells us that an increase in the N:P ratio increased dissolved oxygen in the lakes. This is consistent with the theory that controlling phosphorus concentration in phosphorus deficient lakes can can preserve their water quality. However, phosphorus might not be the only factor affecting the dissolved oxygen and eventutally the water quality of water. It is important to understand what other variables affect dissolved oxygen, whose depletion indicates eutrophication in most cases.
 
 ## GLM
 
-# Research question 2: What are the best set of predictors of dissolved oxygen across the monitoring period at the North Temperate Lakes LTER
-
+### Research question 2: What are the best set of predictors of dissolved oxygen across the monitoring period at the North Temperate Lakes LTER
 ```{r}
 DO.predictors <- Combined_processed %>%
   na.exclude()
@@ -211,12 +195,30 @@ anova(DO.model) # Reconfirmed the above variables as the best
 DO.model <- lm(data = DO.predictors, dissolvedOxygen ~ year4 + daynum + temperature_C + depth + tn_ug + tp_ug) # Asserts the chosen model
 summary(DO.model) # Runs a multiple regression on the above recommended set of variables
 
+Year.plot <- ggplot(DO.predictors, aes(x = year4, y = dissolvedOxygen, color = lakename)) +
+  geom_point(alpha = 0.75) +
+  geom_smooth(method = "lm", se = FALSE, color = "blue") +
+  scale_color_brewer(palette = "Set1", direction = 1) +
+  xlab("Year") + # To label the x axis
+  ylab("Dissolved Oxygen (mh/l)") + # To label the y axis
+  labs (color = "Lake Name") # To label the legend
+print(Year.plot)
+
+Daynum.plot <- ggplot(DO.predictors, aes(x = daynum, y = dissolvedOxygen, color = lakename)) +
+  geom_point(alpha = 0.75) +
+  geom_smooth(method = "lm", se = FALSE, color = "blue") +
+  scale_color_brewer(palette = "Set1", direction = 1) +
+  xlab("Day Number") + # To label the x axis
+  ylab("Dissolved Oxygen (mh/l)") + # To label the y axis
+  labs (color = "Lake Name") # To label the legend
+print(Daynum.plot)
+
 Temp.plot <- ggplot(DO.predictors, aes(x = temperature_C, y = dissolvedOxygen, color = lakename)) +
   geom_point(alpha = 0.75) +
   geom_smooth(method = "lm", se = FALSE, color = "blue") +
   scale_color_brewer(palette = "Set1", direction = 1) +
   xlab("Temperature (C)") + # To label the x axis
-  ylab("Dissolved Oxygen ()") + # To label the y axis
+  ylab("Dissolved Oxygen (mh/l)") + # To label the y axis
   labs (color = "Lake Name") + # To label the legend
   ylim(0,30)
 print(Temp.plot)
@@ -226,28 +228,10 @@ Depth.plot <- ggplot(DO.predictors, aes(x = depth, y = dissolvedOxygen, color = 
   geom_smooth(method = "lm", se = FALSE, color = "blue") +
   scale_color_brewer(palette = "Set1", direction = 1) +
   xlab("Depth (m)") + # To label the x axis
-  ylab("Dissolved Oxygen ()") + # To label the y axis
+  ylab("Dissolved Oxygen (mh/l)") + # To label the y axis
   labs (color = "Lake Name") + # To label the legend
   ylim (0,25)
 print(Depth.plot)
-
-Year.plot <- ggplot(DO.predictors, aes(x = year4, y = dissolvedOxygen, color = lakename)) +
-  geom_point(alpha = 0.75) +
-  geom_smooth(method = "lm", se = FALSE, color = "blue") +
-  scale_color_brewer(palette = "Set1", direction = 1) +
-  xlab("Year") + # To label the x axis
-  ylab("Dissolved Oxygen ()") + # To label the y axis
-  labs (color = "Lake Name") # To label the legend
-print(Year.plot)
-
-Daynum.plot <- ggplot(DO.predictors, aes(x = daynum, y = dissolvedOxygen, color = lakename)) +
-  geom_point(alpha = 0.75) +
-  geom_smooth(method = "lm", se = FALSE, color = "blue") +
-  scale_color_brewer(palette = "Set1", direction = 1) +
-  xlab("Day Numbee") + # To label the x axis
-  ylab("Dissolved Oxygen ()") + # To label the y axis
-  labs (color = "Lake Name") # To label the legend
-print(Month.plot)
 
 TN.plot <- ggplot(DO.predictors, aes(x = tn_ug, y = dissolvedOxygen, color = lakename)) +
   geom_point(alpha = 0.75) +
@@ -264,7 +248,7 @@ TP.plot <- ggplot(DO.predictors, aes(x = tp_ug, y = dissolvedOxygen, color = lak
   geom_smooth(method = "lm", se = FALSE, color = "blue") +
   scale_color_brewer(palette = "Set1", direction = 1) +
   xlab("P (µg/l)") + # To label the x axis
-  ylab("Dissolved Oxygen ()") + # To label the y axis
+  ylab("Dissolved Oxygen (mh/l)") + # To label the y axis
   labs (color = "Lake Name") + # To label the legend
   ylim(0, 20)
 print(TP.plot)
