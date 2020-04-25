@@ -254,7 +254,7 @@ TN.plot <- ggplot(DO.predictors, aes(x = tn_ug, y = dissolvedOxygen, color = lak
   geom_smooth(method = "lm", se = FALSE, color = "blue") +
   scale_color_brewer(palette = "Set1", direction = 1) +
   xlab("N (µg/l)") + # To label the x axis
-  ylab("Dissolved Oxygen ()") + # To label the y axis
+  ylab("Dissolved Oxygen (mg/l)") + # To label the y axis
   labs (color = "Lake Name") + # To label the legend
   ylim(0, 20)
 print(TN.plot)
