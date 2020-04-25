@@ -49,15 +49,51 @@ format = "%m/%d/%y")
 # Data exploration of the Nutrients and ChemistryPhysics raw data files associated with the NTL-LTER lakes datasets
 
 ```{r}
+dim(Nutrients_raw)
+dim(ChemistryPhysics_raw)
+str(Nutrients_raw)
+str(ChemistryPhysics_raw)
+colnames(Nutrients_raw)
+colnames(ChemistryPhysics_raw)
+summary(Nutrients_raw)
+summary(ChemistryPhysics_raw)
 
 ```
 
 ## Plots
 
-You can also embed plots, for example:
 
 ```{r, echo=FALSE}
-plot(pressure)
+TN.FreqPol.plot <- ggplot(Nutrients_raw) +
+  geom_freqpoly(aes(x = tn_ug, color = lakename), bins = 50) +
+  xlab("Total Nitrogen Concentration (µg/l)") + # To label the x axis
+  ylab("Count") + # To label the y axis
+  labs (color = "Lake Name") # To label the legend
+print(TN.FreqPol.plot)
+
+TN.Box.plot <- ggplot(Nutrients_raw) +
+  geom_boxplot(aes(x = lakename, y = tn_ug, color = lakename)) +
+  theme(axis.text.x = element_text(angle = 60, hjust = 1)) +
+  theme(legend.position="none") + # To removes the legend
+  xlab("Lake Name") + # To label the x axis
+  ylab("TN (µg/l)") # To label the y axis
+print(TN.Box.plot)
+
+TN.Scatter.plot <- ggplot(Nutrients_raw, aes(x = sampledate, y = tn_ug, color = lakename)) +
+  geom_point() +
+  stat_smooth(color = "black") +
+  xlab("Lake Name") + # To label the x axis
+  ylab("TN (µg/l)") + # To label the y axis
+  labs (color = "Lake Name") # To label the legend
+print(TN.Scatter.plot)
+
+DO.Scatter.plot <- ggplot(ChemistryPhysics_raw, aes(x = sampledate, y = dissolvedOxygen, color = lakename)) +
+  geom_point() +
+  stat_smooth(color = "black") +
+  ylim(0,25) + # To remove the outliers
+  xlab("Lake Name") + # To label the x axis
+  ylab("Dissolved Oxygen (mg/L)") + # To label the y axis
+  labs (color = "Lake Name") # To label the legend
+print(DO.Scatter.plot)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
